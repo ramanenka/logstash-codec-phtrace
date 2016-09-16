@@ -1,6 +1,5 @@
 # encoding: utf-8
 require "logstash/codecs/base"
-require "logstash/codecs/line"
 
 # Read events from the phtrace binary protocol over the network via udp.
 #
@@ -21,16 +20,12 @@ class LogStash::Codecs::Phtrace < LogStash::Codecs::Base
 
   public
   def register
-    @lines = LogStash::Codecs::Line.new
-    @lines.charset = "UTF-8"
   end
   
   public
   def decode(data)
-    @lines.decode(data) do |line|
-      replace = { "message" => line["message"].to_s + @append }
+      replace = { "message" => data.to_s + @append }
       yield LogStash::Event.new(replace)
-    end
   end
 
 end
