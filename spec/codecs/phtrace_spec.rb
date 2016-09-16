@@ -1,5 +1,4 @@
 require "logstash/devutils/rspec/spec_helper"
-require "logstash/codecs/line"
 require "logstash/event"
 
 describe LogStash::Codecs::Phtrace do
