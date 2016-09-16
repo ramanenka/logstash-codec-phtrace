@@ -1,5 +1,6 @@
 require "logstash/devutils/rspec/spec_helper"
 require "logstash/event"
+require "logstash/codecs/phtrace"
 
 describe LogStash::Codecs::Phtrace do
   context "Normal message handling" do
