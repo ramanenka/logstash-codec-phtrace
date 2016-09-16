@@ -1,12 +1,14 @@
----
 sudo: false
 language: ruby
-cache: bundler
-rvm:
-- jruby-1.7.25
-before_script:
-- bundle exec rake vendor
-script:
-- bundle exec rspec spec
 jdk: oraclejdk8
-before_install: []
+cache: bundler
+
+rvm:
+  - jruby-1.7.26
+
+before_script:
+  - bundle exec rake vendor
+
+script:
+  - bundle exec rspec spec
+
