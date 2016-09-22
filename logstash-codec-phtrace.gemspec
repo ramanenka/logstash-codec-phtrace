@@ -6,6 +6,8 @@ Gem::Specification.new do |s|
   s.summary         = "Read events from the phtrace binary protocol"
   s.description     = "This gem is a Logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This gem is not a stand-alone program"
   s.authors         = ["Vadzim Ramanenka"]
+  s.email			= 'vadromanenko@gmail.com'
+  s.homepage		= 'https://github.com/vadd/logstash-codec-phtrace'
   s.require_paths = ["lib"]
 
   # Files
